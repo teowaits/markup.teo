@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteo Cavalleri | e-Business Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --muted: #8b949e;
+            --hover-bg: rgba(88, 166, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 60px 20px;
+        }
+
+        .card {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid var(--muted);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .section-header {
+            font-size: 0.75rem;
+            color: var(--muted);
+            margin: 25px 0 10px 0;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .link-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text);
+            padding: 12px 15px;
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid transparent;
+        }
+
+        .link-item:hover {
+            background: var(--hover-bg);
+            border-color: var(--accent);
+            color: var(--accent);
+            padding-left: 20px;
+        }
+
+        /* The Return Symbol Animation */
+        .link-item::after {
+            content: '⏎';
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.2s ease;
+            font-size: 1.1rem;
+        }
+
+        .link-item:hover::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .link-label {
+            font-weight: 500;
+        }
+
+        .link-meta {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-left: 10px;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.7rem;
+            color: var(--muted);
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <header>
+        <h1>MATTEO_CAVALLERI</h1>
+        <div class="title">Quantum Mechanic // Research & Data</div>
+    </header>
+
+    <main>
+        <span class="section-header">01_Scientific_Identity</span>
+        <ul>
+            <li><a href="https://www.authorea.com/users/matteo-cavalleri" class="link-item">
+                <span class="link-label">Authorea</span><span class="link-meta">publications.md</span>
+            </a></li>
+            <li><a href="https://orcid.org/0000-0002-3112-6582" class="link-item">
+                <span class="link-label">ORCID</span><span class="link-meta">identity.vcf</span>
+            </a></li>
+        </ul>
+
+        <span class="section-header">02_Network</span>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/matteocavalleri/" class="link-item">
+                <span class="link-label">LinkedIn</span><span class="link-meta">professional.net</span>
+            </a></li>
+            <li><a href="https://github.com/teowaits" class="link-item">
+                <span class="link-label">GitHub</span><span class="link-meta">source_code</span>
+            </a></li>
+        </ul>
+
+        <span class="section-header">03_Telemetry</span>
+        <ul>
+            <li><a href="https://strava.com" class="link-item">
+                <span class="link-label">Strava</span><span class="link-meta">kinetic_logs</span>
+            </a></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>SYSTEM_STATUS: STABLE</p>
+        <p>© 2026 // Built with IBM Plex Mono</p>
+    </footer>
+</div>
+
+</body>
+</html>
